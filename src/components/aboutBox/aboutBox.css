@@ -1,0 +1,32 @@
+h1 {
+  font-size: 18px;
+  color: #ff3946;
+  font-weight: semibold;
+}
+
+.first-subtitle {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #314584;
+  letter-spacing: 1;
+}
+
+.second-subtitle {
+  margin-top: 70px;
+  font-size: 12px;
+  color: #314584;
+  font-weight: normal;
+}
+
+.images-container {
+  margin-top: 65px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.images-container img {
+  width: 5px;
+  height: 5px;
+}
