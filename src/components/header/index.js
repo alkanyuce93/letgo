@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./header.css";
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <Container fluid>
-      <Row className="header-row">
+      <Row className={`header-row ${showMenu ? "mobile-menu" : ""}`}>
         <Col xs={2} className="logo-col">
           <img
             src="/doobLogo.png"
@@ -18,25 +24,25 @@ const Header = () => {
         </Col>
 
         <Col xs={8} className="menu-col">
-          <div className="menu-items">
-            <span>Home.</span>
+          {showMenu ? (
+            <div className="menu-items-mobile">
+              <span>Home.</span>
+              <span>About Us.</span>
+              <span>Portfolio.</span>
+              <span>Blog.</span>
+              <span>Contact Us.</span>
+            </div>
+          ) : (
+            <div className="menu-items">
+              <span>Home.</span>
+              <span>About Us.</span>
+              <span>Portfolio.</span>
+              <span>Blog.</span>
+              <span>Contact Us.</span>
+            </div>
+          )}
 
-            <span>About Us.</span>
-
-            <span>Portfolio.</span>
-
-            <span>Blog.</span>
-
-            <span>Contact Us.</span>
-          </div>
-          <div
-            style={{
-              flexDirection: "row",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className="en-section">
             <div>
               <span>EN </span>
               <img
