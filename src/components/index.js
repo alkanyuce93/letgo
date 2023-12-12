@@ -5,3 +5,4 @@ export * from "./textInput";
 export * from "./customButton";
 export * from "./box";
 export * from "./aboutBox";
+export * from "./customTextArea";

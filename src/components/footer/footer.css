@@ -1,0 +1,15 @@
+.header {
+  color: "#fff";
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  flex: 1;
+}
+.menu-items span {
+  cursor: pointer;
+}
+
+.menu-items img {
+  margin-top: 20px;
+  cursor: pointer;
+}

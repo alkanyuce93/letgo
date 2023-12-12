@@ -7,9 +7,10 @@ import Box from "../box";
 import AboutBox from "../aboutBox";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
+import CustomTextarea from "../customTextArea";
 
 const ContainerComponent = () => {
-  const [selectedItem, setSelectedItem] = useState(6);
+  const [selectedItem, setSelectedItem] = useState(0);
   const sliderItems = [
     { id: 1, width: 300, height: 200 },
     { id: 2, width: 300, height: 200 },
@@ -20,9 +21,9 @@ const ContainerComponent = () => {
   ];
 
   const sliderItems2 = [
-    { id: 1, width: 365, height: 350 },
-    { id: 2, width: 365, height: 350 },
-    { id: 3, width: 365, height: 350 },
+    { id: 1, width: 310, height: 290 },
+    { id: 2, width: 310, height: 290 },
+    { id: 3, width: 310, height: 290 },
   ];
 
   return (
@@ -116,7 +117,7 @@ const ContainerComponent = () => {
             </Col>
           </Row>
 
-          <Row style={{ marginTop: 175, position: "relative" }}>
+          <Row style={{ position: "relative" }}>
             <Row className="slider-header-row">
               <Col xl={4}>
                 <h1 className="header-2-text">
@@ -128,13 +129,29 @@ const ContainerComponent = () => {
                   style={{
                     display: "flex",
                     justifyContent: "flex-end",
+                    alignItems: "center",
+                    width: "100%",
                   }}
                 >
                   <FaArrowLeft size={10} color="gray" />
                   <FaArrowRightLong size={15} style={{ marginLeft: 15 }} />
                 </div>
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: -20,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    color: "#ff4359",
+                    fontSize: 16,
+                    cursor: "pointer",
+                  }}
+                >
+                  See More of These
+                </div>
               </Col>
             </Row>
+
             {sliderItems.map((item, index) => (
               <Col key={item.id} className="slider-item" xs={4}>
                 <div
@@ -147,17 +164,67 @@ const ContainerComponent = () => {
               </Col>
             ))}
           </Row>
-          <Row style={{ marginTop: 50 }}>
+          <Row style={{ marginTop: 50, display: "flex", flexDirection: "row" }}>
+            <div>
+              <h1 className="header-3-text ">BLOG STORIES</h1>
+              <h1 className="header-2-text">Check Our News</h1>
+            </div>
             {sliderItems2.map((item, index) => (
-              <Col
-                key={item.id}
-                className={`slider-item-2 ${
-                  selectedItem === index + sliderItems.length ? "selected" : ""
-                }`}
-                xs={4}
-                onClick={() => setSelectedItem(index + sliderItems.length)}
-              >
-                <div style={{ width: item.width, height: item.height }}></div>
+              <Col key={item.id} xl={4} onClick={() => setSelectedItem(index)}>
+                <div
+                  style={{
+                    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                    width: item.width,
+                    height: item.height,
+
+                    backgroundColor:
+                      selectedItem === index ? "#ff4359" : "initial",
+                    color: selectedItem === index ? "#fff" : "#000",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 40,
+                      left: 40,
+                      fontSize: 18,
+                    }}
+                  >
+                    New Adventure
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 75,
+                      left: 40,
+                      fontSize: 14,
+                    }}
+                  >
+                    17 March 2019
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 120,
+                      left: 40,
+                      fontSize: 14,
+                    }}
+                  >
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est
+                    on dui. Nulla porttitor accumsan tincidunt.
+                  </div>
+                  <FaArrowRightLong
+                    size={15}
+                    style={{
+                      position: "absolute",
+                      bottom: 10,
+                      right: 10,
+                      color: selectedItem === index ? "#fff" : "#ff4359",
+                      marginLeft: 15,
+                    }}
+                  />
+                </div>
               </Col>
             ))}
           </Row>
@@ -169,8 +236,15 @@ const ContainerComponent = () => {
               width: "100%",
             }}
           >
+            <div>
+              <h1 className="header-3-text ">CONTACT US</h1>
+              <h1 className="header-2-text">Get in Touch</h1>
+            </div>
             <Col xl={6}>
-              <TextInput placeholder="E-mail" />
+              <TextInput
+                placeholderColor={"#314584"}
+                placeholder="Your email"
+              />
             </Col>
             <Col xl={6}>
               <TextInput placeholder="Subject" />
@@ -184,17 +258,20 @@ const ContainerComponent = () => {
               justifyContent: "center",
             }}
           >
-            <textarea
-              style={{
-                width: "100%",
-                height: 120,
-                padding: 10,
-                backgroundColor: "rgba(244, 250, 254, 0.5)",
-                border: "none",
-              }}
-              placeholder="Message Here"
-            />
+            <CustomTextarea placeholder="Your Message" />
           </Row>
+          <div
+            style={{
+              alignItems: "center",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              marginTop: 70,
+              marginBottom: 70,
+            }}
+          >
+            <CustomButton type="small" text={"Send Message"} />
+          </div>
         </Col>
 
         <Col xl={2} className="right-col"></Col>

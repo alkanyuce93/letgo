@@ -109,12 +109,14 @@
   margin-bottom: 20px;
 }
 .slider-item-2 {
-  border: 1px solid #ddd;
-  margin: 0 10px 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .slider-item.selected {
   background-color: #ff4359;
   color: #fff;
+  border: none;
+  box-shadow: none;
 }
 .slider-header-row {
   justify-content: space-between;
@@ -173,4 +175,14 @@
   height: 5px;
   display: flex;
   justify-content: flex-end;
+}
+
+.header-3-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff4359;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-family: "Work Sans", sans-serif;
 }
