@@ -36,18 +36,11 @@ const ContainerComponent = () => {
             <Col xl={6} className="middle-left-col">
               <div className="middle-left-col-content">
                 <h1 className="header-text">The Spirit of Digital Agency.</h1>
-                <p style={{ marginTop: 25 }}>
+                <p className="paragraph-margin-top">
                   Vestibulum ac diam sit amet quam vehicula elementum amet est
                   on dui. Nulla porttitor accumsan tincidunt.
                 </p>
-                <Row
-                  style={{
-                    width: "100%",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    marginTop: 20,
-                  }}
-                >
+                <Row className="full-width-row">
                   <Col xl={6} className="button-row-col">
                     <CustomButton type="small" text={"More About us"} />
                   </Col>
@@ -68,13 +61,7 @@ const ContainerComponent = () => {
               </div>
             </Col>
           </Row>
-          <Row
-            style={{
-              marginTop: 50,
-              display: "flex",
-              alignItems: "flex-start",
-            }}
-          >
+          <Row className="margin-top-50">
             <Col xl={4} className="middle-mid-left-col">
               <div className="middle-mid-left-col-content">
                 <h1 className="header-2-text">
@@ -117,7 +104,7 @@ const ContainerComponent = () => {
             </Col>
           </Row>
 
-          <Row style={{ position: "relative" }}>
+          <Row style={{ position: "relative", marginTop: 180 }}>
             <Row className="slider-header-row">
               <Col xl={4}>
                 <h1 className="header-2-text">
@@ -125,30 +112,15 @@ const ContainerComponent = () => {
                 </h1>
               </Col>
               <Col xl={8} className="slider-header-row-col">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                    width: "100%",
-                  }}
-                >
-                  <FaArrowLeft size={10} color="gray" />
-                  <FaArrowRightLong size={15} style={{ marginLeft: 15 }} />
+                <div className="absolute-right-5">
+                  <FaArrowLeft
+                    size={10}
+                    color="gray"
+                    style={{ marginRight: 15 }}
+                  />
+                  <FaArrowRightLong size={15} />
                 </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: -20,
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    color: "#ff4359",
-                    fontSize: 16,
-                    cursor: "pointer",
-                  }}
-                >
-                  See More of These
-                </div>
+                <div className="absolute-bottom-center">See More of These</div>
               </Col>
             </Row>
 
@@ -164,6 +136,7 @@ const ContainerComponent = () => {
               </Col>
             ))}
           </Row>
+
           <Row style={{ marginTop: 50, display: "flex", flexDirection: "row" }}>
             <div>
               <h1 className="header-3-text ">BLOG STORIES</h1>

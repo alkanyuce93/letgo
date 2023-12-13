@@ -32,25 +32,15 @@ const Footer = () => {
         CREATIVITY ABOVE
       </h1>
       <div className="menu-items">
-        <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
-          Home.
-        </span>
+        <span className="menu-text">Home.</span>
 
-        <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
-          About Us.
-        </span>
+        <span className="menu-text">About Us.</span>
 
-        <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
-          Portfolio.
-        </span>
+        <span className="menu-text">Portfolio.</span>
 
-        <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
-          Blog.
-        </span>
+        <span className="menu-text">Blog.</span>
 
-        <span style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
-          Contact Us.
-        </span>
+        <span className="menu-text">Contact Us.</span>
       </div>
       <h1
         style={{
