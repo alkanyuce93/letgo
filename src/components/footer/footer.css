@@ -5,11 +5,17 @@
   margin-top: 10px;
   flex: 1;
 }
-.menu-items span {
-  cursor: pointer;
-}
 
 .menu-items img {
   margin-top: 20px;
   cursor: pointer;
+}
+
+.menu-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Work Sans";
 }
