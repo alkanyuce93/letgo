@@ -49,10 +49,10 @@ const Header = () => {
           {!showMenu && (
             <div className="menu-items">
               <div>Home.</div>
-              <div style={{ marginLeft: 50 }}>About Us.</div>
-              <div style={{ marginLeft: 50 }}> Portfolio.</div>
-              <div style={{ marginLeft: 50 }}>Blog.</div>
-              <div style={{ marginLeft: 50 }}>Contact Us.</div>
+              <div style={{ marginLeft: 20 }}>About Us.</div>
+              <div style={{ marginLeft: 20 }}> Portfolio.</div>
+              <div style={{ marginLeft: 20 }}>Blog.</div>
+              <div style={{ marginLeft: 20 }}>Contact Us.</div>
             </div>
           )}
 
