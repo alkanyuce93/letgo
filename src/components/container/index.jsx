@@ -130,6 +130,8 @@ const ContainerComponent = () => {
                 ></div>
               </Col>
             ))}
+
+            <div class="absolute-bottom-center">See More of These</div>
           </Row>
 
           <Row style={{ marginTop: 50, display: "flex", flexDirection: "row" }}>
