@@ -4,6 +4,15 @@ h1 {
   font-weight: semibold;
 }
 
+.about-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -46,6 +55,14 @@ h1 {
 @media (max-width: 767px) {
   h1 {
     font-size: 16px;
+  }
+  .about-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
   }
 
   .container {

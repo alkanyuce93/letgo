@@ -7,3 +7,5 @@ export * from "./box";
 export * from "./aboutBox";
 export * from "./customTextArea";
 export * from "./illustrationComponent";
+export * from "./services";
+export * from "./portfolio";
