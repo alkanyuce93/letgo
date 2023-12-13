@@ -146,7 +146,7 @@ const ContainerComponent = () => {
                     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                     width: item.width,
                     height: item.height,
-
+                    cursor: "pointer",
                     backgroundColor:
                       selectedItem === index ? "#ff4359" : "initial",
                     color: selectedItem === index ? "#fff" : "#000",
@@ -159,6 +159,7 @@ const ContainerComponent = () => {
                       top: 40,
                       left: 40,
                       fontSize: 18,
+                      cursor: "pointer",
                     }}
                   >
                     New Adventure
@@ -169,6 +170,7 @@ const ContainerComponent = () => {
                       top: 75,
                       left: 40,
                       fontSize: 14,
+                      cursor: "pointer",
                     }}
                   >
                     17 March 2019
@@ -179,6 +181,7 @@ const ContainerComponent = () => {
                       top: 120,
                       left: 40,
                       fontSize: 14,
+                      cursor: "pointer",
                     }}
                   >
                     Vestibulum ac diam sit amet quam vehicula elementum amet est
