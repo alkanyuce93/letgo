@@ -1,0 +1,12 @@
+.offcanvas-body {
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 769px) {
+  .nav-link {
+    color: #464e90;
+  }
+  .sidebar {
+    backdrop-filter: blur(10px);
+  }
+}
