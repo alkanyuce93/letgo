@@ -29,10 +29,8 @@ const ContainerComponent = () => {
   return (
     <Container fluid>
       <Row>
-        <Col xl={2} className="left-col"></Col>
-
-        <Col xl={8}>
-          <Row>
+        <Col className="offset-md-2" xl={8}>
+          <Row className="middle-height">
             <Col xl={6} className="middle-left-col">
               <div className="middle-left-col-content">
                 <h1 className="header-text">The Spirit of Digital Agency.</h1>
@@ -51,15 +49,13 @@ const ContainerComponent = () => {
               </div>
             </Col>
 
-            <Col xl={6} className="middle-right-col">
-              <div className="middle-left-col-content">
-                <img
-                  src="/illustration1.png"
-                  alt="Group-1"
-                  className="illustration-1"
-                />
-              </div>
-            </Col>
+            <div className="middle-left-col-content">
+              <img
+                src="/illustration1.png"
+                alt="Group-1"
+                className="illustration-1"
+              />
+            </div>
           </Row>
           <Row className="margin-top-50">
             <Col xl={4} className="middle-mid-left-col">
@@ -70,8 +66,8 @@ const ContainerComponent = () => {
                 <CustomButton type="xsmall" text={"Get in Touch"} />
               </div>
             </Col>
-            <Col xl={4} className="middle-mid-mid-col">
-              <div className="middle.mid-mid-col-content">
+            <Col xl={4} className="middle-mid-right-col">
+              <div className="middle-mid-right-col-content">
                 <Box
                   image="./bag.png"
                   imageWidth={60}
@@ -104,7 +100,7 @@ const ContainerComponent = () => {
             </Col>
           </Row>
 
-          <Row style={{ position: "relative", marginTop: 180 }}>
+          <Row className="portfolio">
             <Row className="slider-header-row">
               <Col xl={4}>
                 <h1 className="header-2-text">
@@ -120,7 +116,6 @@ const ContainerComponent = () => {
                   />
                   <FaArrowRightLong size={15} />
                 </div>
-                <div className="absolute-bottom-center">See More of These</div>
               </Col>
             </Row>
 
@@ -135,6 +130,8 @@ const ContainerComponent = () => {
                 ></div>
               </Col>
             ))}
+
+            <div class="absolute-bottom-center">See More of These</div>
           </Row>
 
           <Row style={{ marginTop: 50, display: "flex", flexDirection: "row" }}>
@@ -246,8 +243,6 @@ const ContainerComponent = () => {
             <CustomButton type="small" text={"Send Message"} />
           </div>
         </Col>
-
-        <Col xl={2} className="right-col"></Col>
       </Row>
     </Container>
   );

@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Modal } from "react-bootstrap";
+import { RxHamburgerMenu } from "react-icons/rx";
 import "./header.css";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleHamburgerClick = () => {
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,15 +46,7 @@ const Header = () => {
         </Col>
 
         <Col xs={8} className="menu-col">
-          {showMenu ? (
-            <div className="menu-items-mobile">
-              <span>Home.</span>
-              <span>About Us.</span>
-              <span>Portfolio.</span>
-              <span>Blog.</span>
-              <span>Contact Us.</span>
-            </div>
-          ) : (
+          {!showMenu && (
             <div className="menu-items">
               <span>Home.</span>
               <span>About Us.</span>
@@ -81,8 +83,26 @@ const Header = () => {
             </Button>
           </div>
         </Col>
-        <Col xs={2} className="logo-col"></Col>
+
+        <Col xs={2} className="logo-col">
+          {showMenu && <RxHamburgerMenu onClick={handleHamburgerClick} />}
+        </Col>
       </Row>
+
+      <Modal show={showModal} onHide={handleModalClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Mobile Menu</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="menu-items-mobile">
+            <span>Home.</span>
+            <span>About Us.</span>
+            <span>Portfolio.</span>
+            <span>Blog.</span>
+            <span>Contact Us.</span>
+          </div>
+        </Modal.Body>
+      </Modal>
     </Container>
   );
 };
