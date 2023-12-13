@@ -8,9 +8,13 @@ import AboutBox from "../aboutBox";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import CustomTextarea from "../customTextArea";
+import IllustrationComponent from "../illustrationComponent";
 
 const ContainerComponent = () => {
   const [selectedItem, setSelectedItem] = useState(0);
+  const [imagewidth, setimagewidth] = useState(500);
+  const [imageheight, setimageheight] = useState(450);
+
   const sliderItems = [
     { id: 1, width: 300, height: 200 },
     { id: 2, width: 300, height: 200 },
@@ -49,12 +53,8 @@ const ContainerComponent = () => {
               </div>
             </Col>
 
-            <div className="middle-left-col-content">
-              <img
-                src="/illustration1.png"
-                alt="Group-1"
-                className="illustration-1"
-              />
+            <div className="illustration-container">
+              <IllustrationComponent />
             </div>
           </Row>
           <Row className="margin-top-50">
@@ -146,7 +146,7 @@ const ContainerComponent = () => {
                     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                     width: item.width,
                     height: item.height,
-
+                    cursor: "pointer",
                     backgroundColor:
                       selectedItem === index ? "#ff4359" : "initial",
                     color: selectedItem === index ? "#fff" : "#000",
@@ -159,6 +159,7 @@ const ContainerComponent = () => {
                       top: 40,
                       left: 40,
                       fontSize: 18,
+                      cursor: "pointer",
                     }}
                   >
                     New Adventure
@@ -169,6 +170,7 @@ const ContainerComponent = () => {
                       top: 75,
                       left: 40,
                       fontSize: 14,
+                      cursor: "pointer",
                     }}
                   >
                     17 March 2019
@@ -179,6 +181,7 @@ const ContainerComponent = () => {
                       top: 120,
                       left: 40,
                       fontSize: 14,
+                      cursor: "pointer",
                     }}
                   >
                     Vestibulum ac diam sit amet quam vehicula elementum amet est

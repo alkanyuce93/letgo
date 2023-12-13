@@ -48,11 +48,11 @@ const Header = () => {
         <Col xs={8} className="menu-col">
           {!showMenu && (
             <div className="menu-items">
-              <span>Home.</span>
-              <span>About Us.</span>
-              <span>Portfolio.</span>
-              <span>Blog.</span>
-              <span>Contact Us.</span>
+              <div>Home.</div>
+              <div style={{ marginLeft: 20 }}>About Us.</div>
+              <div style={{ marginLeft: 20 }}> Portfolio.</div>
+              <div style={{ marginLeft: 20 }}>Blog.</div>
+              <div style={{ marginLeft: 20 }}>Contact Us.</div>
             </div>
           )}
 

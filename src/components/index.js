@@ -6,3 +6,4 @@ export * from "./customButton";
 export * from "./box";
 export * from "./aboutBox";
 export * from "./customTextArea";
+export * from "./illustrationComponent";

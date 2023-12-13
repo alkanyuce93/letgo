@@ -29,6 +29,16 @@
   margin-top: 100px;
 }
 
+.illustration-container {
+  height: 680px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+}
+
 .middle-right-col-content {
   height: 680px;
   width: 100%;
@@ -171,8 +181,12 @@
   color: #ff4359;
   font-size: 16px;
   cursor: pointer;
-  left: 50%;
-  transform: translateX(-50%);
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+  display: flex;
+  flex: 1;
+  font-family: "Work Sans", sans-serif;
 }
 .portfolio {
   position: "relative";
@@ -296,6 +310,13 @@
   .middle.mid.bottom-col-content {
     height: 75px;
     padding-top: 50px;
+  }
+
+  .illustration-container {
+    margin-top: 50px;
+    height: 200px;
+    position: relative;
+    width: 100%;
   }
 
   .middle-col {
