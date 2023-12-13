@@ -22,11 +22,12 @@
 
 .menu-items {
   display: flex;
-  gap: 50px;
 }
 
-.menu-items span {
+.menu-items div {
   cursor: pointer;
+  display: flex;
+  font-size: 18px;
 }
 
 .buttons-col {
