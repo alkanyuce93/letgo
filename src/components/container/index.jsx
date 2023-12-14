@@ -1,65 +1,65 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import "./container.css";
 import TextInput from "../textInput";
 import CustomButton from "../customButton";
-import AboutBox from "../aboutBox";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import CustomTextarea from "../customTextArea";
-import IllustrationComponent from "../illustrationComponent";
 import Services from "../services";
 import Portfolio from "../portfolio";
 
 const ContainerComponent = () => {
   const [selectedItem, setSelectedItem] = useState(0);
 
-  const sliderItems2 = [
-    { id: 1, width: 310, height: 290 },
-    { id: 2, width: 310, height: 290 },
-    { id: 3, width: 310, height: 290 },
-  ];
+  const sliderItems2 = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
   return (
     <Container fluid>
-      <Row>
+      <Row className="padding-top-100">
         <Col className="offset-xl-2" xl={8} sm={12}>
-          {/* <Row className="middle-height">
-            <Col xl={6} md={12} l className="middle-left-col">
-              <div className="middle-left-col-content">
+          <Row>
+            <Col md={6} sm={12}>
+              <Row className="padding-top-100">
                 <h1 className="header-text">The Spirit of Digital Agency.</h1>
-                <p className="paragraph-margin-top">
+                <p className="subtitle-text">
                   Vestibulum ac diam sit amet quam vehicula elementum amet est
                   on dui. Nulla porttitor accumsan tincidunt.
                 </p>
-                <Row className="full-width-row">
-                  <Col xl={6} md={12} className="button-row-col">
+                <Row style={{ justifyContent: "space-between" }} xl={6}>
+                  <Col xl={6}>
                     <CustomButton type="small" text={"More About us"} />
                   </Col>
-                  <Col xl={6} md={12} className="button-row-col">
-                    <div className="button-row-col-text">Get in Touch</div>
+                  <Col className="more-about-btn" xl={6}>
+                    <Row className="button-row-col-text">Get in Touch</Row>
                   </Col>
                 </Row>
-              </div>
+              </Row>
             </Col>
-            <Col xl={6} md={12} className="middle-left-col">
-              <div className="illustration-container">
+            <Col md={6} sm={12}>
+              <div className="relative-div">
                 <img
+                  className="illustration-1 image-width-100"
                   src="/illustration1.png"
                   alt="Group-1"
-                  className="illustration-1"
                 />
               </div>
             </Col>
-          </Row> */}
+          </Row>
           <Services />
 
-          <Row xl={12} style={{ marginTop: 240 }}>
-            <Col xl={6}>
-              <img className="about-image" src="/about.png" alt="Group-1" />
+          <Row className="padding-top-100">
+            <Col md={6}>
+              <div className="relative-div">
+                <img
+                  className="illustration-2"
+                  src="/about.png"
+                  alt="Group-1"
+                />
+              </div>
             </Col>
 
-            <Col xl={6} md={{ span: 12, offset: 12 }}>
+            <Col md={6}>
               <h1 className="header-3-text">OUR COMPANY</h1>
               <p className="first-subtitle">Some Fine Words About Us</p>
               <p className="second-subtitle">
@@ -69,9 +69,9 @@ const ContainerComponent = () => {
                 accumsan tincidunt.
               </p>
 
-              <div className="images-container">
-                <FaArrowLeft size={10} color="gray" />
-                <FaArrowRightLong size={15} style={{ marginLeft: 15 }} />
+              <div>
+                <FaArrowLeft className="me-3" size={10} color="gray" />
+                <FaArrowRightLong size={15} />
               </div>
             </Col>
           </Row>
@@ -85,68 +85,44 @@ const ContainerComponent = () => {
             </Col>
             {sliderItems2.map((item, index) => (
               <Col
-                key={item.id}
-                xxl={4}
+                className="mb-3"
+                xl={4}
                 md={6}
+                sm={12}
+                key={item.id}
                 onClick={() => setSelectedItem(index)}
               >
-                <div
+                <Card
+                  className="rounded-0 shadow"
                   style={{
-                    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                    width: item.width,
-                    height: item.height,
                     cursor: "pointer",
                     backgroundColor:
                       selectedItem === index ? "#ff4359" : "initial",
                     color: selectedItem === index ? "#fff" : "#000",
-                    position: "relative",
                   }}
                 >
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 40,
-                      left: 40,
-                      fontSize: 18,
-                      cursor: "pointer",
-                    }}
-                  >
-                    New Adventure
-                  </div>
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 75,
-                      left: 40,
-                      fontSize: 14,
-                      cursor: "pointer",
-                    }}
-                  >
-                    17 March 2019
-                  </div>
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 120,
-                      left: 40,
-                      fontSize: 14,
-                      cursor: "pointer",
-                    }}
-                  >
-                    Vestibulum ac diam sit amet quam vehicula elementum amet est
-                    on dui. Nulla porttitor accumsan tincidunt.
-                  </div>
-                  <FaArrowRightLong
-                    size={15}
-                    style={{
-                      position: "absolute",
-                      bottom: 10,
-                      right: 10,
-                      color: selectedItem === index ? "#fff" : "#ff4359",
-                      marginLeft: 15,
-                    }}
-                  />
-                </div>
+                  <Card.Body className="p-5">
+                    <Card.Title className="mb-3">New Adventure</Card.Title>
+                    <Card.Subtitle className="mb-3">
+                      17 March 2019
+                    </Card.Subtitle>
+                    <Card.Text>
+                      Vestibulum ac diam sit amet quam vehicula elementum amet
+                      est on dui. Nulla porttitor accumsan tincidunt.
+                    </Card.Text>
+                  </Card.Body>
+
+                  <Row>
+                    <Col className="offset-9 pb-4" xs={3}>
+                      <FaArrowRightLong
+                        size={15}
+                        style={{
+                          color: selectedItem === index ? "#fff" : "#ff4359",
+                        }}
+                      />
+                    </Col>
+                  </Row>
+                </Card>
               </Col>
             ))}
           </Row>
@@ -155,13 +131,13 @@ const ContainerComponent = () => {
               <h1 className="header-3-text ">CONTACT US</h1>
               <h1 className="header-2-text">Get in Touch</h1>
             </div>
-            <Col xl={6} className="mt-3">
+            <Col md={6} className="mt-3">
               <TextInput
                 placeholderColor={"#314584"}
                 placeholder="Your email"
               />
             </Col>
-            <Col xl={6} className="mt-3">
+            <Col md={6} className="mt-3">
               <TextInput placeholder="Subject" />
             </Col>
           </Row>

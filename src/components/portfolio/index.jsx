@@ -8,63 +8,72 @@ import "../container/container.css";
 
 const Portfolio = () => {
   return (
-    <Row>
+    <Row className="mt-5">
       <Row>
         <h1 className="header-2-text">See some of our Creative work.</h1>
-
-        <FaArrowLeft size={10} color="gray" />
-        <FaArrowRightLong size={15} />
+        <div className="d-inline-flex justify-content-end ">
+          <div>
+            <FaArrowLeft className="me-3" size={10} color="gray" />
+            <FaArrowRightLong size={15} />
+          </div>
+        </div>
       </Row>
 
-      <Row xxl={6}>
-        <Card
-          style={{
-            width: "17rem",
-            height: "11rem",
-            backgroundColor: "rgba(187, 187, 188, 0.5)",
-          }}
-          className="mb-3 mx-3"
-        />
-        <Card
-          style={{
-            width: "17rem",
-            height: "11rem",
-            backgroundColor: "rgba(187, 187, 188, 0.5)",
-          }}
-          className="mb-3 mx-3"
-        />
-        <Card
-          style={{
-            width: "17rem",
-            height: "11rem",
-            backgroundColor: "rgba(187, 187, 188, 0.5)",
-          }}
-          className="mb-3 mx-3"
-        />
-        <Card
-          style={{
-            width: "17rem",
-            height: "11rem",
-            backgroundColor: "rgba(187, 187, 188, 0.5)",
-          }}
-          className="mb-3 mx-3"
-        />
-        <Card
-          style={{
-            width: "17rem",
-            height: "11rem",
-            backgroundColor: "rgba(187, 187, 188, 0.5)",
-          }}
-          className="mb-3 mx-3"
-        />
-        <Card
-          style={{
-            width: "17rem",
-            height: "11rem",
-            backgroundColor: "rgba(187, 187, 188, 0.5)",
-          }}
-          className="mb-3 mx-3"
-        />
+      <Row>
+        <Col xs={6} md={4}>
+          <Card
+            style={{
+              height: "11rem",
+              backgroundColor: "rgba(187, 187, 188, 0.5)",
+            }}
+            className="mb-3 rounded-0"
+          ></Card>
+        </Col>
+        <Col xs={6} md={4}>
+          <Card
+            style={{
+              height: "11rem",
+              backgroundColor: "rgba(187, 187, 188, 0.5)",
+            }}
+            className="mb-3 rounded-0"
+          />
+        </Col>
+        <Col xs={6} md={4}>
+          <Card
+            style={{
+              height: "11rem",
+              backgroundColor: "rgba(187, 187, 188, 0.5)",
+            }}
+            className="mb-3 rounded-0"
+          />
+        </Col>
+        <Col xs={6} md={4}>
+          <Card
+            style={{
+              height: "11rem",
+              backgroundColor: "rgba(187, 187, 188, 0.5)",
+            }}
+            className="mb-3 rounded-0"
+          />
+        </Col>
+        <Col xs={6} md={4}>
+          <Card
+            style={{
+              height: "11rem",
+              backgroundColor: "rgba(187, 187, 188, 0.5)",
+            }}
+            className="mb-3 rounded-0"
+          />
+        </Col>
+        <Col xs={6} md={4}>
+          <Card
+            style={{
+              height: "11rem",
+              backgroundColor: "rgba(187, 187, 188, 0.5)",
+            }}
+            className="mb-3 rounded-0"
+          />
+        </Col>
       </Row>
 
       <div className="absolute-bottom-center">See More of These</div>
