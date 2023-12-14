@@ -127,10 +127,10 @@ const ContainerComponent = () => {
             ))}
           </Row>
           <Row className="mt-5">
-            <div>
+            <Row className="mt-5">
               <h1 className="header-3-text ">CONTACT US</h1>
               <h1 className="header-2-text">Get in Touch</h1>
-            </div>
+            </Row>
             <Col md={6} className="mt-3">
               <TextInput
                 placeholderColor={"#314584"}

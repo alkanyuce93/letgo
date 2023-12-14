@@ -59,6 +59,7 @@
   margin-left: 10px;
   color: #314584;
   cursor: pointer;
+  justify-content: center;
 }
 .absolute-bottom-center {
   position: relative;
@@ -71,12 +72,6 @@
   display: flex;
   flex: 1;
   font-family: "Work Sans", sans-serif;
-}
-.button-row-col-text {
-  font-size: 16px;
-  font-weight: bold;
-  color: #314584;
-  cursor: pointer;
 }
 
 .illustration-1 {
@@ -137,6 +132,10 @@
   }
   .card-padding {
     padding-top: 20px;
+  }
+  .button-row-col-text {
+    justify-content: flex-start;
+    padding-left: 65px;
   }
 }
 
