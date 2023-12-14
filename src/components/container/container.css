@@ -174,3 +174,8 @@
     padding-top: 50px;
   }
 }
+@media (min-width: 2560px) {
+  .padding-top-300 {
+    padding-top: 600px;
+  }
+}
