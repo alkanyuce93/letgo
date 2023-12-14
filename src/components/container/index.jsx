@@ -78,13 +78,18 @@ const ContainerComponent = () => {
 
           <Portfolio />
 
-          <Row style={{ marginTop: 50, display: "flex", flexDirection: "row" }}>
-            <div>
+          <Row className="mt-5">
+            <Col xl={12}>
               <h1 className="header-3-text ">BLOG STORIES</h1>
               <h1 className="header-2-text">Check Our News</h1>
-            </div>
+            </Col>
             {sliderItems2.map((item, index) => (
-              <Col key={item.id} xl={4} onClick={() => setSelectedItem(index)}>
+              <Col
+                key={item.id}
+                xxl={4}
+                md={6}
+                onClick={() => setSelectedItem(index)}
+              >
                 <div
                   style={{
                     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
@@ -145,50 +150,29 @@ const ContainerComponent = () => {
               </Col>
             ))}
           </Row>
-          <Row
-            style={{
-              marginTop: 50,
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-            }}
-          >
+          <Row className="mt-5">
             <div>
               <h1 className="header-3-text ">CONTACT US</h1>
               <h1 className="header-2-text">Get in Touch</h1>
             </div>
-            <Col xl={6}>
+            <Col xl={6} className="mt-3">
               <TextInput
                 placeholderColor={"#314584"}
                 placeholder="Your email"
               />
             </Col>
-            <Col xl={6}>
+            <Col xl={6} className="mt-3">
               <TextInput placeholder="Subject" />
             </Col>
           </Row>
-          <Row
-            style={{
-              marginTop: 50,
-              width: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <CustomTextarea placeholder="Your Message" />
+          <Row>
+            <Col xl={12} className="mt-3">
+              <CustomTextarea placeholder="Your Message" />
+            </Col>
+            <Col xl={12} className="my-3 d-flex justify-content-center">
+              <CustomButton type="small" text={"Send Message"} />
+            </Col>
           </Row>
-          <div
-            style={{
-              alignItems: "center",
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              marginTop: 70,
-              marginBottom: 70,
-            }}
-          >
-            <CustomButton type="small" text={"Send Message"} />
-          </div>
         </Col>
       </Row>
     </Container>

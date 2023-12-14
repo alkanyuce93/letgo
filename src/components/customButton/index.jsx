@@ -25,6 +25,7 @@ const CustomButton = ({
     border: "none",
     cursor: "pointer",
     fontSize: `${fontSize}px`,
+    alingItems: "center",
   };
 
   return <button style={buttonStyle}>{text}</button>;
