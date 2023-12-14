@@ -47,8 +47,7 @@ const ContainerComponent = () => {
             </Col>
           </Row>
           <Services />
-
-          <Row className="padding-top-100">
+          <Row className="padding-top-300">
             <Col md={6}>
               <div className="relative-div">
                 <img
@@ -58,7 +57,6 @@ const ContainerComponent = () => {
                 />
               </div>
             </Col>
-
             <Col md={6}>
               <h1 className="header-3-text">OUR COMPANY</h1>
               <p className="first-subtitle">Some Fine Words About Us</p>
@@ -78,7 +76,7 @@ const ContainerComponent = () => {
 
           <Portfolio />
 
-          <Row className="mt-5">
+          <Row className="blog-stories">
             <Col xl={12}>
               <h1 className="header-3-text ">BLOG STORIES</h1>
               <h1 className="header-2-text">Check Our News</h1>
@@ -129,7 +127,7 @@ const ContainerComponent = () => {
           <Row className="mt-5">
             <Row className="mt-5">
               <h1 className="header-3-text ">CONTACT US</h1>
-              <h1 className="header-2-text">Get in Touch</h1>
+              <h1 className="first-subtitle">Get in Touch</h1>
             </Row>
             <Col md={6} className="mt-3">
               <TextInput

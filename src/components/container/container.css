@@ -1,7 +1,7 @@
 .header-text {
   font-size: 46px;
   font-weight: bolder;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   color: #314584;
   letter-spacing: 2px;
 }
@@ -12,13 +12,17 @@
   width: 100%;
 }
 .padding-top-300 {
-  padding-top: 300px;
+  padding-top: 250px;
 }
 .padding-top-100 {
   padding-top: 100px;
 }
 .relative-div {
   position: relative;
+}
+
+.blog-stories {
+  padding-top: 150px;
 }
 
 .more-about-btn {
@@ -48,7 +52,7 @@
 .header-2-text {
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 80px;
   color: #314584;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -82,7 +86,7 @@
 .illustration-2 {
   object-fit: cover;
   position: absolute;
-  left: -175px;
+  left: -150px;
   width: 100%;
 }
 .illustration-2-container {
@@ -101,17 +105,15 @@
 
 @media (max-width: 769px) {
   .header-text {
-    font-size: 24px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
   }
 
   .header-2-text {
-    font-size: 15px;
+    margin-bottom: 20px;
   }
 
   .header-3-text {
-    font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 }
 
@@ -137,21 +139,22 @@
     justify-content: flex-start;
     padding-left: 65px;
   }
+  .blog-stories {
+    padding-top: 75px;
+  }
 }
 
 @media (max-width: 375px) {
   .header-text {
-    font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 
   .header-2-text {
-    font-size: 15px;
+    margin-bottom: 10px;
   }
 
   .header-3-text {
-    font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
   .illustration-1 {
     object-fit: cover;
@@ -165,6 +168,9 @@
     padding-top: 50px;
   }
   .card-padding {
+    padding-top: 50px;
+  }
+  .blog-stories {
     padding-top: 50px;
   }
 }
