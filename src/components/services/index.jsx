@@ -5,7 +5,7 @@ import CustomButton from "../customButton";
 
 const Services = () => {
   return (
-    <Row className="mt-5 paddin-top-300">
+    <Row className="padding-top-300">
       <Col xxl={4} md={12}>
         <div>
           <h1 className="header-2-text">
