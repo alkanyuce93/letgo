@@ -20,31 +20,19 @@
 }
 
 .middle-left-col-content {
-  height: 680px;
   width: 100%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   margin-top: 100px;
 }
 
 .illustration-container {
-  height: 680px;
   width: 100%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   margin-top: 100px;
 }
 
 .middle-right-col-content {
-  height: 680px;
   width: 100%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -67,6 +55,14 @@
 }
 
 .middle-mid-right-col {
+  height: 400px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.services-col {
   height: 400px;
   width: 100%;
   flex: 1;
@@ -192,8 +188,6 @@
 }
 
 .about-image {
-  width: 627px;
-  height: 375px;
   object-fit: cover;
   position: absolute;
   left: 100px;
@@ -358,8 +352,6 @@
   .margin-top-50 {
     padding-top: 30px;
     font-size: 14px;
-    display: flex;
-    flex-direction: column;
   }
 
   .absolute-right-5 {
@@ -387,6 +379,16 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .portfolio {
+    padding-top: 100px;
+    flex-direction: row;
+  }
+  .slider-items-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
 }
 
 @media (min-width: 1024px) {

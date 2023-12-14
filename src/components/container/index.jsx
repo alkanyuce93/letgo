@@ -3,26 +3,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./container.css";
 import TextInput from "../textInput";
 import CustomButton from "../customButton";
-import Box from "../box";
 import AboutBox from "../aboutBox";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import CustomTextarea from "../customTextArea";
 import IllustrationComponent from "../illustrationComponent";
+import Services from "../services";
+import Portfolio from "../portfolio";
 
 const ContainerComponent = () => {
   const [selectedItem, setSelectedItem] = useState(0);
-  const [imagewidth, setimagewidth] = useState(500);
-  const [imageheight, setimageheight] = useState(450);
-
-  const sliderItems = [
-    { id: 1, width: 300, height: 200 },
-    { id: 2, width: 300, height: 200 },
-    { id: 3, width: 300, height: 200 },
-    { id: 4, width: 300, height: 200 },
-    { id: 5, width: 300, height: 200 },
-    { id: 6, width: 300, height: 200 },
-  ];
 
   const sliderItems2 = [
     { id: 1, width: 310, height: 290 },
@@ -33,9 +23,9 @@ const ContainerComponent = () => {
   return (
     <Container fluid>
       <Row>
-        <Col className="offset-md-2" xl={8}>
-          <Row className="middle-height">
-            <Col xl={6} className="middle-left-col">
+        <Col className="offset-xl-2" xl={8} sm={12}>
+          {/* <Row className="middle-height">
+            <Col xl={6} md={12} l className="middle-left-col">
               <div className="middle-left-col-content">
                 <h1 className="header-text">The Spirit of Digital Agency.</h1>
                 <p className="paragraph-margin-top">
@@ -43,104 +33,63 @@ const ContainerComponent = () => {
                   on dui. Nulla porttitor accumsan tincidunt.
                 </p>
                 <Row className="full-width-row">
-                  <Col xl={6} className="button-row-col">
+                  <Col xl={6} md={12} className="button-row-col">
                     <CustomButton type="small" text={"More About us"} />
                   </Col>
-                  <Col xl={6} className="button-row-col">
+                  <Col xl={6} md={12} className="button-row-col">
                     <div className="button-row-col-text">Get in Touch</div>
                   </Col>
                 </Row>
               </div>
             </Col>
-
-            <div className="illustration-container">
-              <IllustrationComponent />
-            </div>
-          </Row>
-          <Row className="margin-top-50">
-            <Col xl={4} className="middle-mid-left-col">
-              <div className="middle-mid-left-col-content">
-                <h1 className="header-2-text">
-                  Anything you need, we’ve got you covered
-                </h1>
-                <CustomButton type="xsmall" text={"Get in Touch"} />
-              </div>
-            </Col>
-            <Col xl={4} className="middle-mid-right-col">
-              <div className="middle-mid-right-col-content">
-                <Box
-                  image="./bag.png"
-                  imageWidth={60}
-                  imageHeight={60}
-                  header="Web & Graphic Design"
-                  content="Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt."
+            <Col xl={6} md={12} className="middle-left-col">
+              <div className="illustration-container">
+                <img
+                  src="/illustration1.png"
+                  alt="Group-1"
+                  className="illustration-1"
                 />
               </div>
             </Col>
-            <Col xl={4} className="middle-mid-right-col">
-              <div className="middle-mid-right-col-content">
-                <Box
-                  image="./screen.png"
-                  imageWidth={70}
-                  imageHeight={50}
-                  header="Web & App Development"
-                  content="Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt."
-                />
-              </div>
-            </Col>
-          </Row>
+          </Row> */}
+          <Services />
 
-          <Row style={{ marginTop: 240 }}>
-            <Col xl={6} className="middle.mid.bottom-col">
+          <Row xl={12} style={{ marginTop: 240 }}>
+            <Col xl={6}>
               <img className="about-image" src="/about.png" alt="Group-1" />
             </Col>
 
-            <Col xl={6} className="middle.mid.bottom-col">
-              <AboutBox />
+            <Col xl={6} md={{ span: 12, offset: 12 }}>
+              <h1 className="header-3-text">OUR COMPANY</h1>
+              <p className="first-subtitle">Some Fine Words About Us</p>
+              <p className="second-subtitle">
+                Vestibulum ac diam sit amet quam vehicula elementum amet est on
+                dui. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit
+                amet quam vehicula elementum amet est on dui. Nulla porttitor
+                accumsan tincidunt.
+              </p>
+
+              <div className="images-container">
+                <FaArrowLeft size={10} color="gray" />
+                <FaArrowRightLong size={15} style={{ marginLeft: 15 }} />
+              </div>
             </Col>
           </Row>
 
-          <Row className="portfolio">
-            <Row className="slider-header-row">
-              <Col xl={4}>
-                <h1 className="header-2-text">
-                  See some of our Creative work.
-                </h1>
-              </Col>
-              <Col xl={8} className="slider-header-row-col">
-                <div className="absolute-right-5">
-                  <FaArrowLeft
-                    size={10}
-                    color="gray"
-                    style={{ marginRight: 15 }}
-                  />
-                  <FaArrowRightLong size={15} />
-                </div>
-              </Col>
-            </Row>
+          <Portfolio />
 
-            {sliderItems.map((item, index) => (
-              <Col key={item.id} className="slider-item" xs={4}>
-                <div
-                  style={{
-                    width: item.width,
-                    height: item.height,
-                    backgroundColor: "#c3d0d8",
-                  }}
-                ></div>
-              </Col>
-            ))}
-
-            <div class="absolute-bottom-center">See More of These</div>
-          </Row>
-
-          <Row style={{ marginTop: 50, display: "flex", flexDirection: "row" }}>
-            <div>
+          <Row className="mt-5">
+            <Col xl={12}>
               <h1 className="header-3-text ">BLOG STORIES</h1>
               <h1 className="header-2-text">Check Our News</h1>
-            </div>
+            </Col>
             {sliderItems2.map((item, index) => (
-              <Col key={item.id} xl={4} onClick={() => setSelectedItem(index)}>
+              <Col
+                key={item.id}
+                xxl={4}
+                md={6}
+                onClick={() => setSelectedItem(index)}
+              >
                 <div
                   style={{
                     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
@@ -201,50 +150,29 @@ const ContainerComponent = () => {
               </Col>
             ))}
           </Row>
-          <Row
-            style={{
-              marginTop: 50,
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-            }}
-          >
+          <Row className="mt-5">
             <div>
               <h1 className="header-3-text ">CONTACT US</h1>
               <h1 className="header-2-text">Get in Touch</h1>
             </div>
-            <Col xl={6}>
+            <Col xl={6} className="mt-3">
               <TextInput
                 placeholderColor={"#314584"}
                 placeholder="Your email"
               />
             </Col>
-            <Col xl={6}>
+            <Col xl={6} className="mt-3">
               <TextInput placeholder="Subject" />
             </Col>
           </Row>
-          <Row
-            style={{
-              marginTop: 50,
-              width: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <CustomTextarea placeholder="Your Message" />
+          <Row>
+            <Col xl={12} className="mt-3">
+              <CustomTextarea placeholder="Your Message" />
+            </Col>
+            <Col xl={12} className="my-3 d-flex justify-content-center">
+              <CustomButton type="small" text={"Send Message"} />
+            </Col>
           </Row>
-          <div
-            style={{
-              alignItems: "center",
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              marginTop: 70,
-              marginBottom: 70,
-            }}
-          >
-            <CustomButton type="small" text={"Send Message"} />
-          </div>
         </Col>
       </Row>
     </Container>
